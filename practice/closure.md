@@ -4,6 +4,12 @@
 
 ```js
 // Your code goes here
+const multiplyBy = (num) => {
+  const multiplyWith = (secondNum) => {
+    return secondNum * num;
+  }
+  return multiplyWith;
+};
 
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
@@ -13,6 +19,12 @@ const final = double(15); // final should be 30
 
 ```js
 // Your code goes here
+const fullName = (firstName) => {
+  const result = (lastName) => {
+    return `${firstName} ${lastName}`;
+  }
+  return result;
+};
 
 const name = fullName("Will");
 const final = name("Smith"); // final should be "Will Smith"
@@ -23,6 +35,10 @@ const final = name("Smith"); // final should be "Will Smith"
 ```js
 function isInBetween(a, b) {
   // your code goes here
+  function myFunc(num) {
+    return (a <= num && num <= b) ? true : false;
+  }
+  return myFunc;
 }
 
 const isChild = isInBetween(10, 100);
@@ -36,6 +52,11 @@ isChild(103); // false
 ```js
 function letsWishThem(greeting) {
   // your code goes here
+  function result(str) {
+    return greeting + " " + str;
+  };
+
+  return result;
 }
 
 const callWithHey = letsWishThem("Hey");
@@ -49,6 +70,12 @@ callWithHello("How Are You?"); // Hello How Are You?
 ```js
 function addGame(gameName) {
   // your code goes here
+  score = 0;
+  const myFunc = () => {
+    score++;
+    console.log(`Your score of ${gameName} is ${score}`);
+  };
+  return myFunc;
 }
 
 // Output
@@ -65,7 +92,13 @@ cricket(); // Your score of Cricket is 2
 ```js
 function getCard(suit) {
   // your code goes here
-}
+  let cards = [2,3,4,5,6,7,8,9,10,"J", "Q", "K", "A"];
+  function myFunc() {
+    let randomCard = cards[(Math.floor(Math.random()*13))];
+    return randomCard;
+  };
+  return myFunc;
+};
 
 // Output
 const randomClub = addGame("Club");
