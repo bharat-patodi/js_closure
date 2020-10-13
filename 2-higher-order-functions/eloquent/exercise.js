@@ -6,11 +6,11 @@ arrays.reduce((acc, curr) => acc.concat(curr), []);
 
 // Challenge 2. Your own loop
 // Your code here.
-function loop(val, testFn, UpdateFn, BodyFn) {
+function loop(val, test, update, execute) {
   for(let i = 0; i < 3; i++) {
-    testFn(val);
-    BodyFn(val);
-    val = UpdateFn(val);
+    test(val);
+    execute(val);
+    val = update(val);
   }
 };
 
