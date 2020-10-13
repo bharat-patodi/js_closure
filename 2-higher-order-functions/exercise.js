@@ -50,7 +50,7 @@ function mapWith(array, callback) {
 //Extension 2
 function reduce(array, callback, initialValue) {
   let finalVal = initialValue;
-  for (val of array) {
+  for (let val of array) {
     finalVal = callback(finalVal, val);
   }
   return finalVal;
